@@ -2,8 +2,8 @@ const dbConfig = require("./db.params");
 const Sequelize = require("sequelize");
 require("dotenv").config();
 
-const sequelize = new Sequelize(process.env.MYSQL_DB_DOCKER, process.env.DB_USER_DOCKER, "rtfgcv", {
-  host: "mysql-db",
+const sequelize = new Sequelize(process.env.MYSQL_DB, process.env.DB_USER, process.env.DB_PASS, {
+  host: process.env.DB_HOST,
   port: "3306",
   dialect: dbConfig.dialect,
   define: {

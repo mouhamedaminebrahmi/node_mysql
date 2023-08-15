@@ -1,7 +1,7 @@
 const Redis = require("ioredis");
 require("dotenv").config();
 const redisClient = Redis.createClient({
-  host: process.env.REDIS_COMP,
+  host: process.env.REDIS,
   port: "6379",
 });
 
